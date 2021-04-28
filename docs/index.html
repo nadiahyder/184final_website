@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<style>
+  body {
+    padding: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+</style>
+<title>CS 184: Final Project Milestone Deliverable</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+
+
+<body>
+
+<h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2021</h1>
+<h1 align="middle">Final Project Milestone Deliverable: Iridescence — Wavelength Dependent Path Tracing</h1>
+<h2 align="middle">Chetana Ramaiyer, Iris Chow, Nadia Hyder and Yichi Zhang</h2>
+
+<br><br>
+
+<div>
+<h2 align="middle">Project Description:</h2>
+
+<p>We want to build on our pathtracer to model light interactions with thin film surfaces. The ultimate goal is to support rendering of iridescent objects.</p>
+
+<h2><b>Progress:</b></h2>
+<p> So far we are fairly on track with our original timeline presented in our project proposal including:</p>
+<p>    - Reading research papers to understand light, thinfilm, how they interact, and how to estimate the interference that leads to the rainbow effect </p>
+<p>    - Altering .dae files such as CBspheres.dae and CBbunny.dae from project 3 to include thin film materials and effects </p>
+<p>    - Updating the collada file from project 3 to be able to parse our new thin film effects in our XML files </p>
+<p>    - Created a new BSDF type called ThinfilmBSDF with sample_f functions as well as a helper function to calculate the intensity for reflected and
+  transmitted light based on the estimated interference patterns for red, green and blue wavelengths </p>
+
+
+  <br><br>
+  <video width="1000" controls>
+    <source src="images/milestone.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+  </video>
+  <br><br>
+
+<h2> Link to slides: </h2>
+<p>https://docs.google.com/presentation/d/1YUe6vGgCdSVZ54A408AU4jitNQCmUJ7t4mXTvj88k-4/edit#slide=id.p</p>
+
+<h2> <b>Next Steps:</b></h2>
+<p>We are mostly on track with our original plan and slightly ahead of schedule. We’ve finished a basic implementation and are able to render images that are somewhat close to our final goal. For example, here is an image of a hollow, transparent, thin film sphere (essentially a soap bubble):</p>
+
+<div align="middle">
+  <table style="width=100%">
+      <tr>
+          <td>
+            <img src="images/image.png" align="middle" width = 400px/>
+          </td>
+      </tr>
+  </table>
+</div>
+<p>It is showing the rainbow effect near the edges and looks relatively realistic. Another goal we have is to vary the thickness of the bubble vertically to achieve a more realistic look. We would also like to support rendering of solid objects like the dragon or bunny with a thin film over top. This will require alterations for more .dae files and possibly refinements to our code.</p>
+
+
+<h2> <b>Updated Plan:</b></h2>
+<p>    - By 5/1: Implement varying thickness of the soap bubble</p>
+<p>    - By 5/1: Figure out why there are shadows underneath our transparent bubbles</p>
+<p>    - By 5/3: Continue creating more thin film .dae files to render</p>
+<p>    - Start writing final report and preparing presentation this week and update it as we go along</p>
+
+</body>
+</html>
